@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font-header;
+    src: url('../font/DynaPuff-VariableFont_wdth\,wght.ttf');
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: #e963ee;
+    line-height: 40px;
+    
+    position: fixed;
+  
+}
+
+.header li {
+    display: inline-block;
+    border: 3px solid #FFC18E;
+    width: 80px;
+    height: 70px;
+    background-color: #f375cd;   
+    padding: 10px;
+    text-align: center;
+}
+
+.header li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.header li:hover {
+    background-color: #FFC18E;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;
+    height: 650px;
+    background-image: url('../images/photo_2022-08-18_18-47-44.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: 40px;
+
+    font-size: calc(30px + 3vw);
+}
+
+.header p {
+    margin: auto;
+
+    font-size: calc(8px + 1.5vw);
+    
+    text-align: center;
+    font-family: font-header;
+    color: beige;
+    background-color: rgba(245, 91, 2, 0.5);
+    width: 50%;
+    height: 50px;
+    line-height: 45px;
+    border: 3px dashed red;
+
+    border-radius: 15px;
+} 
+
+span {
+    color: #820000;
+    font-family: font-header;
+}
+
+.content {
+    width: 100%;
+    height: 900px;
+    background-color: rgb(180, 167, 180);
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+
+    width: 70%;
+    height: 240px;
+    padding-top: 15px;
+}
+
+.gallery {
+    min-width: 200px;
+
+    border: 2px solid orangered;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 23%;
+    height: 450px;
+    margin-right: 15px;
+}
+
+.gallery p {
+    width:70% ;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    font-family: font-header;
+}
+
+.about {
+    width: 100%;
+    height: 650px;
+    background-image: url('../images/photo_2022-08-18_18-47-38.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 600px;
+    border-radius: 100%;
+
+    width: 60%;
+    height: 85%;
+    min-width: 400px;
+    background-color: rgb(15, 15, 15,0.6);
+    border:5px dashed white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text p {
+    text-align: center;
+
+    color: beige;
+    font-size: calc(10px + 1.2vw);   
+}
+
+@media screen and (max-width : 768px) {
+
+    .header li{
+        width:200px ;
+    }    
+
+    .header ul {
+        display: flex;
+        justify-content: space-around;
+       
+    }
+
+    h1 {
+    padding-top: 280px;
+    }
+
+    .content {
+        display: grid;
+        grid-area: gallery1 gallery2
+                   gallery3 gallery4;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows:  1fr 1fr;
+        padding-left: 100px;
+        padding-top: 20px;
+        height: 1100px;
+
+    }
+
+    .about-text {
+        height: 70%;
+    }
+}
+
+@media screen and (max-width : 480px ) {
+
+    .content{
+        padding-right: 90px;
+    }
+    
+    .about-text {
+        height: 65%;
+    }
+}
